@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8254227124211491342}
   - component: {fileID: 4981891873209200043}
   - component: {fileID: 7117880982545029473}
+  - component: {fileID: -3291577138033326506}
   m_Layer: 0
   m_Name: cubeYellow
   m_TagString: Untagged
@@ -79,3 +80,15 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &-3291577138033326506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8775043398910703796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8590e188746e4715ab1679089a18167, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
