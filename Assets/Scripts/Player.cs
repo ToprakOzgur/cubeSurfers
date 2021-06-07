@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private float forwardSpeed = 0.5f;
-    [SerializeField] private float swipeSensitivity = 0.1f;
+    public Tower tower;
+    public GameObject character;
+
+    [Space(10)]
+    [Header("Movement Settings")]
+    [Space(10)] [SerializeField] private float forwardSpeed = 0.5f;
+    [Space(10)] [SerializeField] private float swipeSensitivity = 0.1f;
+
 
     private Platform platform;
     #region Unity Events
@@ -50,4 +56,12 @@ public class Player : MonoBehaviour
                 transform.position.x + movementX > platform.RightBorderPint;
     }
     #endregion
+
+    public void AddCubeToTower(Cube cube)
+    {
+        character.transform.position += Vector3.up * cube.Size;
+        tower.transform.position += Vector3.up * cube.Size;
+        cube.gameObject.transform.position = new Vector3(tower.gameObject.transform.position.x, cube.gameObject.transform.position.y, transform.position.z);
+        cube.gameObject.transform.SetParent(tower.transform);
+    }
 }

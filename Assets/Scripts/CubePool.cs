@@ -32,11 +32,13 @@ public class CubePool : MonoBehaviour
             cube.Type = cubeType;
             cube.gameObject.SetActive(false);
             cubes.Enqueue(cube);
+            cube.gameObject.transform.SetParent(transform);
         }
     }
     public void RetunToPool(Cube cube)
     {
         cube.gameObject.SetActive(false);
         cubes.Enqueue(cube);
+        cube.gameObject.transform.SetParent(transform);
     }
 }

@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Platform : MonoBehaviour
 {
-    [SerializeField] private Transform leftBorder;
-    [SerializeField] private Transform rightBorder;
+
+    [Space(10)]
+    [Header("Borders")]
+    [Space(10)] [SerializeField] private Transform leftBorder;
+    [Space(10)] [SerializeField] private Transform rightBorder;
 
     public float LeftBorderPint => leftBorder.position.x;
     public float RightBorderPint => rightBorder.position.x;
