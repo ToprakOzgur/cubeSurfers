@@ -13,4 +13,6 @@ public class Platform : MonoBehaviour
     public float LeftBorderPint => leftBorder.position.x;
     public float RightBorderPint => rightBorder.position.x;
 
+
+
 }
