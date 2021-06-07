@@ -131,6 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 468082124}
   - component: {fileID: 468082123}
+  - component: {fileID: 468082125}
   m_Layer: 0
   m_Name: CubeSpawner
   m_TagString: Untagged
@@ -150,6 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69d53a578ba6542539f9594ac4938d39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnDistance: 0.6
 --- !u!4 &468082124
 Transform:
   m_ObjectHideFlags: 0
@@ -164,6 +166,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &468082125
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468082122}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.35312074, y: 0.24128664, z: 0.06591081}
+  m_Center: {x: -0.01763317, y: 0.03894812, z: 0.012604851}
 --- !u!1 &816742046
 GameObject:
   m_ObjectHideFlags: 0
@@ -1097,6 +1112,8 @@ MonoBehaviour:
   - {fileID: 5304786559664977119, guid: b2086ef7325c8f54aad3b06279712721, type: 3}
   - {fileID: -4374987110731084655, guid: c2b03be3bc50af248b208caff3bcda4e, type: 3}
   - {fileID: 4305434126056222717, guid: 08f06e2b4a0e2a04a9d698cfead9b890, type: 3}
+  - {fileID: -7737292011564023249, guid: bf6873dfe97189b408d368a2216003fc, type: 3}
+  - {fileID: -3291577138033326506, guid: 45a8b3dd7adc0a5479d16c9eaec3f045, type: 3}
 --- !u!4 &2058677870
 Transform:
   m_ObjectHideFlags: 0
