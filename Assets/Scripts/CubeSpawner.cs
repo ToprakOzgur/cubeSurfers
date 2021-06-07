@@ -8,10 +8,17 @@ public class CubeSpawner : MonoBehaviour
 
     private void Start()
     {
-        // var cube = CubePool.Instance.GetCube();
 
-        // cube.transform.position = this.transform.position;
-        // cube.gameObject.SetActive(true);
+
+        for (int i = 2; i < 50; i++)
+        {
+            Debug.Log("swan");
+            var cube = CubePool.Instance.GetCube();
+
+            cube.transform.position = new Vector3(this.transform.position.x, transform.position.y, transform.position.z + i);
+            cube.gameObject.SetActive(true);
+        }
+
 
     }
 }

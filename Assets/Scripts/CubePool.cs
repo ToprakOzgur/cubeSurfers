@@ -41,4 +41,8 @@ public class CubePool : MonoBehaviour
         cubes.Enqueue(cube);
         cube.gameObject.transform.SetParent(transform);
     }
+    public int GetCubeTypeCount()
+    {
+        return cubePrefabs.Count;
+    }
 }

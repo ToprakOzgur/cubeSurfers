@@ -24,7 +24,6 @@ public class Cube : MonoBehaviour, ICollactable
     {
         boxCollider = GetComponent<BoxCollider>();
         Size = boxCollider.bounds.size.y;
-        Debug.Log(size);
     }
     private void OnEnable()
     {
@@ -43,5 +42,9 @@ public class Cube : MonoBehaviour, ICollactable
             other.gameObject.GetComponent<Player>().AddCubeToTower(this);
 
         }
+    }
+    public void MoveDown()
+    {
+        transform.position = new Vector3(transform.position.x, transform.position.y - Size, transform.position.z);
     }
 }

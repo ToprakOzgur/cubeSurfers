@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     void Awake()
     {
         platform = FindObjectOfType<Platform>();
+        tower.player = this;
     }
     void OnEnable()
     {
@@ -60,8 +61,13 @@ public class Player : MonoBehaviour
     public void AddCubeToTower(Cube cube)
     {
         character.transform.position += Vector3.up * cube.Size;
-        tower.transform.position += Vector3.up * cube.Size;
-        cube.gameObject.transform.position = new Vector3(tower.gameObject.transform.position.x, cube.gameObject.transform.position.y, transform.position.z);
-        cube.gameObject.transform.SetParent(tower.transform);
+
+        tower.AddCubeToBottom(cube);
+
+
+    }
+    public void MoveCharacterDown(float cubeSize)
+    {
+        character.transform.position = new Vector3(character.transform.position.x, character.transform.position.y - cubeSize, character.transform.position.z);
     }
 }
